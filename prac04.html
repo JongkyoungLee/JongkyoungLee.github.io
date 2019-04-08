@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+          var length = $(".viewport li").length;
+          var height = 380
+          var width = 980
+          $(".viewport").css({
+            width: width,
+            height: height,
+            overflow: "hidden"
+          })
+          $(".viewport ul").css({width: width * length})
+          $(".viewport li").css({
+            width:width,
+            height: height,
+            float: "left"
+          })
+
+          var moveTo = function(index){
+            index = index % length
+            $(".viewport ul").animate({
+              marginLeft:-width * index
+            })
+          }
+          for(var i = 0; i < length; i++){
+            (function(i){
+              $("<button></button>").text(i).click(function(){
+                moveTo(i)
+              var title =  $($(".viewport li").get(i)).attr("data-title")
+              $("h1").html(title)
+              $("h2").html("0" + (i + 1))
+              currentIndex = i
+              }).appendTo("body")
+            })(i)
+
+          }
+          var currentIndex = 0
+          setInterval(function(){
+            currentIndex += 1
+            moveTo(currentIndex)
+          }, 1000 * 3)
+          window.moveSlider = moveTo;
+        });
+    </script>
+  </head>
+  <body>
+    <h2 id="index-label"></h2>
+    <h2 id="title-label"></h2>
+    <h1></h1>
+    <div class="viewport">
+      <ul>
+        <li data-title="가나다"><a href="#"><img src="a.jpg" alt=""></a></li>
+        <li data-title="라마바"><a href="#"><img src="b.jpg" alt=""></a></li>
+        <li data-title="사아자"><a href="#"><img src="c.jpg" alt=""></a></li>
+        <li data-title="차카타"><a href="#"><img src="d.jpg" alt=""></a></li>
+        <li data-title="파하가"><a href="#"><img src="e.jpg" alt=""></a></li>
+        <li data-title="나다라"><a href="#"><img src="f.jpg" alt=""></a></li>
+        <li data-title="마바사"><a href="#"><img src="g.jpg" alt=""></a></li>
+        <li data-title="아자차"><a href="#"><img src="h.jpg" alt=""></a></li>
+      </ul>
+    </div>
+  </body>
+</html>
