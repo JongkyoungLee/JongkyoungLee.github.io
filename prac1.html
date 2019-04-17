@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        * { margin:0; padding:0; }
+        .wrapper { width:1920px; }
+        .wrapper header>.headerBack>h1>img { width:200px; height:50px; }
+        .wrapper header>.headerBack>h1 {  display:inline-block; margin:20px 0 0 202px; }
+        .wrapper header>.headerBack { background-color:black; height:87px; opacity:0.6;}
+        .wrapper header .headerBack .right { float:right; margin:36px 200px 0 0;position:relative; }
+        .wrapper header .headerBack .right ul li { display:inline-block; padding-right:20px;}
+        .wrapper header .headerBack .right ul ul li { display:block; padding-top:12px; width:120px; background-color:black;}
+        .wrapper header .headerBack .right ul ul{ display:none; position:absolute; padding-top:30px;}
+        .wrapper header .headerBack .right ul li a { text-decoration:none; color:white; display:block; }
+        .wrapper .inBox { width:1920px; height:100vh; background-color:#213951; position:relative;}
+        .wrapper .inBox .sliderBox { overflow:hidden; height:800px; width:1000px; position:absolute; top:50px; left:450px; }
+        .wrapper .inBox .sliderBox ul li { display:inline-block; height:1000px;   }
+        .wrapper .inBox .sliderBox .slider li a img{  width:1000px; height:1000px;}
+        .sns { float:right; }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+  <div class="wrapper">
+    <div class="container">
+    <header>
+      <div class="headerBack">
+        <h1><img src="logo.jpg"  alt=""></h1>
+        <div class="right">
+          <ul>
+            <li>
+              <a href="#">ABOUT US</a>
+              <ul>
+                <li><a href="#">타이티소개</a></li>
+                <li><a href="#">강사소개</a></li>
+                <li><a href="#">교육특징</a></li>
+                <li><a href="#">타히티둘러보기</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">CURRICULUM</a>
+              <ul>
+                <li><a href="#">컴퓨터그래픽</a></li>
+                <li><a href="#">애니웹툰</a></li>
+                <li><a href="#">아크릴페인팅</a></li>
+                <li><a href="#">인체수업</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">INFORMATION</a>
+              <ul>
+                <li><a href="#">수강문의</a></li>
+                <li><a href="#">시간표</a></li>
+                <li><a href="#">오시는길</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">GALLERY</a>
+              <ul>
+                <li><a href="#">영상자료</a></li>
+                <li><a href="#">포트폴리오</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">NOTICE</a>
+              <ul>
+                <li><a href="#">학원소식</a></li>
+                <li><a href="#">자료</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="inBox">
+      <!-- <img src="img1.png" id = "background" alt="이미지1"> -->
+      <div class="sliderBox">
+        <ul class="slider">
+          <li><a href=""><img src="img1.jpg" alt=""></a></li>
+          <li><a href=""><img src="img2.jpg" alt=""></a></li>
+          <li><a href=""><img src="img3.jpg" alt=""></a></li>
+          <li><a href=""><img src="img4.jpg" alt=""></a></li>
+          <li><a href=""><img src="img5.jpg" alt=""></a></li>
+        </ul>
+      </div>
+      <div class="sns">
+        <div class="facebook"><a href="">f</a></div>
+        <div class="instar"><a href="">i</a></div>
+        <div class="youtube"><a href="">y</a></div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+  <script type="text/javascript">
+  var bt_start = document.getElementById("bt_start");
+  var img = document.getElementById('background');
+  var itv = setInterval(bt_R_function, 3000);
+  var num=1;
+  var i=1;
+  bt_start.addEventListener('click', function(){
+      itv = setInterval(bt_R_function, 3000);
+    //누구를 멈출건지 () 괄호안에 입력
+  });
+  function bt_R_function() {
+    if (i>0) {
+      num++;
+      img.src = 'img'+num+'.png';
+      console.log(num);
+      if (num==8) {
+        i=-1;
+      }
+    }
+    else if (i<0) {
+      num--;
+      img.src = 'img' + num+'.png';
+      console.log(num);
+      if (num==1) {
+        i=1;
+      }
+    }
+    // if (num<8) {
+    //   num++;
+    //   img.src = 'img/img' + num+'.png';
+    // }
+    // else {
+    //   num=1;
+    //   img.src = 'img/img' + num+'.png';
+    // }
+  }
+  </script>
+  </body>
+</html>
