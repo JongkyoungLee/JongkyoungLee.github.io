@@ -3,31 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <style>
-        * { margin:0; padding:0; }
-        .wrapper { width:100%; }
-        .inBox { animation: change 10s infinite; }
-        @keyframes change{
-          0%{ background-color:#213951;}
-          25%{ background-color:#0b4b64;}
-          50%{ background-color:#336667;}
-          75%{ background-color:#658b4e;}
-          100%{ background-color:#99b433;}
-        }
-        .wrapper header>.headerBack>h1>img { width:200px; height:50px; }
-        .wrapper header>.headerBack>h1 {  display:inline-block; margin:20px 0 0 202px; }
-        .wrapper header>.headerBack { background-color:black; height:87px; opacity:0.6;}
-        .wrapper header .headerBack .right { float:right; margin:36px 200px 0 0;position:relative; }
-        .wrapper header .headerBack .right ul li { display:inline-block; padding-right:20px;}
-        .wrapper header .headerBack .right ul ul li { display:block; padding-top:12px; width:120px; background-color:black;}
-        .wrapper header .headerBack .right ul ul{ display:none; position:absolute; padding-top:30px; z-index:3;}
-        .wrapper header .headerBack .right ul li a { text-decoration:none; color:white; display:block; }
-        .wrapper .inBox { width:100%; height:100vh;  }
-        .wrapper .inBox .sliderBox { overflow:hidden; height:800px; width:1000px; margin:0 auto; padding-top:50px;}
-        .wrapper .inBox .sliderBox ul li { display:inline-block; height:1000px;   }
-        .wrapper .inBox .sliderBox .slider li a img{  width:1000px; height:1000px;}
-        .sns { float:right; }
-    </style>
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery.colorbox.js"></script>
     <script src="jquery-3.3.1.js"></script>
     <script src="script.js"></script>
   </head>
@@ -37,7 +14,7 @@
     <header>
       <div class="headerBack">
         <h1><img src="logo.jpg"  alt=""></h1>
-        <nav class="right">
+        <nav class="menu">
           <ul>
             <li>
               <a href="#">ABOUT US</a>
@@ -93,18 +70,23 @@
       <!-- <img src="img1.png" id = "background" alt="이미지1"> -->
       <div class="sliderBox">
         <ul class="slider">
-          <li><a href=""><img src="img1.jpg" alt=""></a></li>
-          <li><a href=""><img src="img2.jpg" alt=""></a></li>
-          <li><a href=""><img src="img3.jpg" alt=""></a></li>
+          <li><a href=""><img src="http://weekly.donga.com/List/3/all/11/1389558/1" alt=""></a></li>
+          <li><a href=""><img src="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj39LilxdjhAhUVPXAKHZsGCL8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.royalcanin.co.kr%2Fcat%2Ftr.do%3FP%3D5&psig=AOvVaw2rspCmDRB-LUtojZkRmFkB&ust=1555639021856478" alt=""></a></li>
+          <!-- <li><a href=""><img src="img3.jpg" alt=""></a></li>
           <li><a href=""><img src="img4.jpg" alt=""></a></li>
-          <li><a href=""><img src="img5.jpg" alt=""></a></li>
+          <li><a href=""><img src="img5.jpg" alt=""></a></li> -->
         </ul>
       </div>
 
     </div>
-
+    <div class="subContain">
+      <div class="text">
+        <div class="sub">
+          <h1>TAHITI ART</h1>
+          <p>abcdefghijklmnopqrstuvwxyz</p>
+        </div>
+      </div>
     </div>
-
   </div>
   <script type="text/javascript">
   var bt_start = document.getElementById("bt_start");
