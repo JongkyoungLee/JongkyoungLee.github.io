@@ -5,17 +5,25 @@
     <title></title>
     <style>
         * { margin:0; padding:0; }
-        .wrapper { width:1920px; }
+        .wrapper { width:100%; }
+        .inBox { animation: change 10s infinite; }
+        @keyframes change{
+          0%{ background-color:#213951;}
+          25%{ background-color:#0b4b64;}
+          50%{ background-color:#336667;}
+          75%{ background-color:#658b4e;}
+          100%{ background-color:#99b433;}
+        }
         .wrapper header>.headerBack>h1>img { width:200px; height:50px; }
         .wrapper header>.headerBack>h1 {  display:inline-block; margin:20px 0 0 202px; }
         .wrapper header>.headerBack { background-color:black; height:87px; opacity:0.6;}
         .wrapper header .headerBack .right { float:right; margin:36px 200px 0 0;position:relative; }
         .wrapper header .headerBack .right ul li { display:inline-block; padding-right:20px;}
         .wrapper header .headerBack .right ul ul li { display:block; padding-top:12px; width:120px; background-color:black;}
-        .wrapper header .headerBack .right ul ul{ display:none; position:absolute; padding-top:30px;}
+        .wrapper header .headerBack .right ul ul{ display:none; position:absolute; padding-top:30px; z-index:3;}
         .wrapper header .headerBack .right ul li a { text-decoration:none; color:white; display:block; }
-        .wrapper .inBox { width:1920px; height:100vh; background-color:#213951; position:relative;}
-        .wrapper .inBox .sliderBox { overflow:hidden; height:800px; width:1000px; position:absolute; top:50px; left:450px; }
+        .wrapper .inBox { width:100%; height:100vh;  }
+        .wrapper .inBox .sliderBox { overflow:hidden; height:800px; width:1000px; margin:0 auto; padding-top:50px;}
         .wrapper .inBox .sliderBox ul li { display:inline-block; height:1000px;   }
         .wrapper .inBox .sliderBox .slider li a img{  width:1000px; height:1000px;}
         .sns { float:right; }
@@ -29,7 +37,7 @@
     <header>
       <div class="headerBack">
         <h1><img src="logo.jpg"  alt=""></h1>
-        <div class="right">
+        <nav class="right">
           <ul>
             <li>
               <a href="#">ABOUT US</a>
@@ -77,6 +85,11 @@
       </div>
     </header>
     <div class="inBox">
+      <div class="sns">
+        <div class="facebook"><a href="">F</a></div>
+        <div class="instar"><a href="">I</a></div>
+        <div class="youtube"><a href="">Y</a></div>
+      </div>
       <!-- <img src="img1.png" id = "background" alt="이미지1"> -->
       <div class="sliderBox">
         <ul class="slider">
@@ -87,12 +100,9 @@
           <li><a href=""><img src="img5.jpg" alt=""></a></li>
         </ul>
       </div>
-      <div class="sns">
-        <div class="facebook"><a href="">f</a></div>
-        <div class="instar"><a href="">i</a></div>
-        <div class="youtube"><a href="">y</a></div>
-      </div>
+
     </div>
+
     </div>
 
   </div>
