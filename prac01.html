@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery.colorbox.js"></script>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+  <div class="wrapper">
+    <div class="container">
+    <header>
+      <div class="headerBack">
+        <h1><img src="logo.jpg"  alt=""></h1>
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="#">ABOUT US</a>
+              <ul>
+                <li><a href="#">타이티소개</a></li>
+                <li><a href="#">강사소개</a></li>
+                <li><a href="#">교육특징</a></li>
+                <li><a href="#">타히티둘러보기</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">CURRICULUM</a>
+              <ul>
+                <li><a href="#">컴퓨터그래픽</a></li>
+                <li><a href="#">애니웹툰</a></li>
+                <li><a href="#">아크릴페인팅</a></li>
+                <li><a href="#">인체수업</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">INFORMATION</a>
+              <ul>
+                <li><a href="#">수강문의</a></li>
+                <li><a href="#">시간표</a></li>
+                <li><a href="#">오시는길</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">GALLERY</a>
+              <ul>
+                <li><a href="#">영상자료</a></li>
+                <li><a href="#">포트폴리오</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">NOTICE</a>
+              <ul>
+                <li><a href="#">학원소식</a></li>
+                <li><a href="#">자료</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="inBox">
+      <div class="sns">
+        <div class="facebook"><a href="">F</a></div>
+        <div class="instar"><a href="">I</a></div>
+        <div class="youtube"><a href="">Y</a></div>
+      </div>
+      <!-- <img src="img1.png" id = "background" alt="이미지1"> -->
+      <div class="sliderBox">
+        <ul class="slider">
+          <li><a href=""><img src="http://weekly.donga.com/List/3/all/11/1389558/1" alt=""></a></li>
+          <li><a href=""><img src="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj39LilxdjhAhUVPXAKHZsGCL8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.royalcanin.co.kr%2Fcat%2Ftr.do%3FP%3D5&psig=AOvVaw2rspCmDRB-LUtojZkRmFkB&ust=1555639021856478" alt=""></a></li>
+          <!-- <li><a href=""><img src="img3.jpg" alt=""></a></li>
+          <li><a href=""><img src="img4.jpg" alt=""></a></li>
+          <li><a href=""><img src="img5.jpg" alt=""></a></li> -->
+        </ul>
+      </div>
+
+    </div>
+    <div class="subContain">
+      <div class="text">
+        <div class="sub">
+          <h1>TAHITI ART</h1>
+          <p>abcdefghijklmnopqrstuvwxyz</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  var bt_start = document.getElementById("bt_start");
+  var img = document.getElementById('background');
+  var itv = setInterval(bt_R_function, 3000);
+  var num=1;
+  var i=1;
+  bt_start.addEventListener('click', function(){
+      itv = setInterval(bt_R_function, 3000);
+    //누구를 멈출건지 () 괄호안에 입력
+  });
+  function bt_R_function() {
+    if (i>0) {
+      num++;
+      img.src = 'img'+num+'.png';
+      console.log(num);
+      if (num==8) {
+        i=-1;
+      }
+    }
+    else if (i<0) {
+      num--;
+      img.src = 'img' + num+'.png';
+      console.log(num);
+      if (num==1) {
+        i=1;
+      }
+    }
+    // if (num<8) {
+    //   num++;
+    //   img.src = 'img/img' + num+'.png';
+    // }
+    // else {
+    //   num=1;
+    //   img.src = 'img/img' + num+'.png';
+    // }
+  }
+  </script>
+  </body>
+</html>
